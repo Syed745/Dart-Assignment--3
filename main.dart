@@ -21,6 +21,26 @@ void main() {
 // Input: 10
 // Output: 0 1 1 2 3 5 8
 
+  int limit = 10;
+
+  int num1 = 0;
+
+  int num2 = 1;
+
+  if (limit > 0) {
+    print(num1);
+  }
+
+  if (limit > 0) {
+    print(num2);
+  }
+
+  for (int i = 0; i < limit; i++) {
+    int nextNum = num1 + num2;
+    num1 = num2;
+    num2 = nextNum;
+    print(nextNum);
+  }
 // Q.3 : Implement a code that checks whether a given number is prime or not.
 // Example:
 // Input: 17
@@ -127,16 +147,16 @@ void main() {
 // Number is : 4 and cube of the 4 is :64
 // Number is : 5 and cube of the 5 is :125
 
-  List<int> numbers2 = [1, 2, 3, 4, 5];
+  // List<int> numbers = [1, 2, 3, 4, 5];
 
-  int e = 0;
+  // int e = 0;
 
-  while (e <= numbers2.length) {
-    int number = numbers2[e];
-    int cube = number * number * number;
-    e++;
-    print('Number is : $number and cube of the 5 is :$cube');
-  }
+  // while (e <= numbers.length) {
+  //   int number = numbers[e];
+  //   int cube = number * number * number;
+  //   e++;
+  //   print('Number is : $number and cube of the 5 is :$cube');
+  //}
 
 // Q.10 : Write a program to display a pattern like a right angle triangle using an
 // asterisk using loop.
@@ -211,25 +231,25 @@ void main() {
 // login successful." Otherwise, keep asking for the email and password
 // until the correct credentials are provided.
 
-  String email = "user@gmail.com";
-  String password = "12345678";
+  // String email = "user@gmail.com";
+  // String password = "12345678";
 
-  bool isLoggin = false;
+  // bool isLoggin = false;
 
-  while (!isLoggin) {
-    stdout.write("Enter your email: ");
-    String usEmail = stdin.readLineSync()!;
+  // while (!isLoggin) {
+  //   stdout.write("Enter your email: ");
+  //   String usEmail = stdin.readLineSync()!;
 
-    stdout.write("Enter your password: ");
-    String usPassword = stdin.readLineSync()!;
+  //   stdout.write("Enter your password: ");
+  //   String usPassword = stdin.readLineSync()!;
 
-    if (email == usEmail && password == usPassword) {
-      print('User Login: $email');
-      isLoggin = true;
-    } else {
-      print("Incorrect email or password. Please try again.");
-    }
-  }
+  //   if (email == usEmail && password == usPassword) {
+  //     print('User Login: $email');
+  //     isLoggin = true;
+  //   } else {
+  //     print("Incorrect email or password. Please try again.");
+  //   }
+  // }
 
 // Q.17 :Write a program that asks the user for their email and password. You
 // are given a list of predefined user credentials (email and password
@@ -237,6 +257,26 @@ void main() {
 // credentials in the list, print "User login successful." Otherwise, keep
 // asking for the email and password until the correct credentials are
 // provided.
+
+  List users = [
+    ['john@gmail.com', 'password123'],
+    ['jane@gmail.com', 'jane12345'],
+    ['admin@gmail.com', 'admin123'],
+  ];
+
+  // bool isLogged_In = false;
+
+  // while (!isLogged_In) {
+  //   stdout.write("Enter your email: ");
+  //   String usEmail = stdin.readLineSync()!;
+
+  //   stdout.write("Enter your password: ");
+  //   String usPassword = stdin.readLineSync()!;
+
+  //   if (users == usEmail || users == usPassword) {
+  //     print('Username logged in');
+  //   }
+  // }
 
 // Q.18 :Write a program that takes a list of numbers as input and prints the
 // numbers greater than 5 using a for loop and if-else condition.
