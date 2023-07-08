@@ -168,7 +168,7 @@ void main() {
   int row = 4;
   for (int i = 1; i <= row; i++) {
     for (int j = 1; j <= i; j++) {
-      print('*');
+      stdout.write('*');
     }
     print('');
   }
@@ -180,6 +180,13 @@ void main() {
 // 12
 // 123
 // 1234
+  int rows1 = 5;
+  for (int i = 1; i < rows1; i++) {
+    for (int j = 1; j <= i; j++) {
+      stdout.write(j);
+    }
+    print(' ');
+  }
 
 // Q.12 : Write a program to make such a pattern like a right angle triangle with
 // a number which will repeat a number in a row.
@@ -192,7 +199,7 @@ void main() {
   List<int> row1 = [1, 2, 3, 4];
   for (int i = 0; i <= row1.length; i++) {
     for (int j = 1; j <= i; j++) {
-      print(i);
+      stdout.write(i);
     }
     print('');
   }
@@ -204,6 +211,17 @@ void main() {
 //  2 3
 //  4 5 6
 //  7 8 9 10
+
+  int rows3 = 4;
+
+  int num = 1;
+  for (int i = 1; i <= rows3; i++) {
+    for (int j = 1; j <= i; j++) {
+      stdout.write(' $num ');
+      num++;
+    }
+    stdout.write('\n');
+  }
 
 // Q.14 :Write a program to make a pyramid pattern with numbers increased by
 // 1.
@@ -221,7 +239,7 @@ void main() {
   int row2 = 4;
   for (int i = 1; i <= row2; i++) {
     for (int j = 1; j <= i; j++) {
-      print('* ');
+      stdout.write(' *');
     }
     print('');
   }
@@ -292,17 +310,21 @@ void main() {
 // Q.19 :Write a program that counts the number of vowels in a given string
 // using a for loop and if-else condition.
 
-  String vowelsStr = 'a e i o u s y t';
+  String vowelsStr = 'eiousyt';
+
+  int count = 0;
 
   for (int i = 0; i < vowelsStr.length; i++) {
-    if (vowelsStr[i] == 'a' ||
-        vowelsStr[i] == 'e' ||
-        vowelsStr[i] == 'i' ||
-        vowelsStr[i] == 'o' ||
-        vowelsStr[i] == 'u') {
-      print('${vowelsStr[i]} is a vowel');
+    String strChar = vowelsStr[i];
+    if (strChar == 'a' ||
+        strChar == 'e' ||
+        strChar == 'i' ||
+        strChar == 'o' ||
+        strChar == 'u') {
+      count++;
     }
   }
+  print('${count} all vowel count');
 
 // Q.20 :Implement a code that finds the maximum and minimum elements in a
 // list using a for loop and if-else condition.
