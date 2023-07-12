@@ -382,6 +382,20 @@ void main() {
     },
   ];
 
+  for (var students in studentDetails) {
+    String studenName = students['name'];
+    List<int> marks = students['marks'];
+
+    double obtMarks = marks.reduce((a, b) => a + b) / marks.length;
+
+    String finalGrades = checkGrade(obtMarks);
+
+    print(studenName);
+    print(obtMarks);
+    print(finalGrades);
+    print('');
+  }
+
 // Q.23 :Implement a code that finds the average of all the negative numbers in
 // a list using a for loop and if-else condition.
 
@@ -419,4 +433,18 @@ void main() {
     }
   }
   print(originalList);
+}
+
+String checkGrade(double avgMarks) {
+  if (avgMarks >= 90) {
+    return 'Grade A';
+  } else if (avgMarks >= 80) {
+    return 'Grade B';
+  } else if (avgMarks >= 70) {
+    return 'Grade C';
+  } else if (avgMarks >= 60) {
+    return 'Grade D';
+  } else {
+    return 'Grade E';
+  }
 }
